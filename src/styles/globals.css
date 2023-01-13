@@ -1,0 +1,54 @@
+:root {
+  --neutral-1000: #24292e;
+  --neutral-900: #383f45;
+  --neutral-800: #454c52;
+  --neutral-700: #596066;
+  --neutral-600: #676e76;
+  --neutral-500: #7f8790;
+  --neutral-400: #9ea5ad;
+  --neutral-300: #ced2d6;
+  --neutral-200: #e5e7ea;
+  --neutral-100: #f6f7f9;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+.h4.modal-title {
+  font-size: 1.35rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.h4.modal-title span svg {
+  cursor: pointer;
+}
+.dropdown-item {
+  display: flex;
+  align-items: center;
+}
+.dropdown-item:active,
+.dropdown-item:focus {
+  background-color: #198754;
+}
+.dropdown-item svg {
+  font-size: 1.25rem;
+  margin: 0 0.5rem 0 0;
+}
+.modal .btn-close {
+  display: none;
+}
+.modal-header {
+  padding: 0.65rem 1rem;
+}
+.table {
+  margin: 0;
+}
+.table > :not(caption) > * > * {
+  background-color: #fff;
+  font-size: 0.9rem;
+}
