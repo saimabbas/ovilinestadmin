@@ -15,6 +15,7 @@ import TopHeader from "../components/Header";
 import LeftMenu from "../components/LeftMenu";
 import { RightContentBox } from "../components/RightContentBox";
 import { BsDownload, BsLink45Deg, BsEye } from "react-icons/bs";
+import Footer from "../components/Footer";
 
 const QueryClaimStatisticsStyles = styled.div`
   .qcs-top-grid {
@@ -35,7 +36,6 @@ const QueryClaimStatisticsStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 3rem;
     & ul {
       margin: 0;
     }
@@ -319,6 +319,7 @@ const QueryClaimStatistics = () => {
                 <Pagination.Last />
               </Pagination>
             </div>
+            <Footer />
           </RightContentBox>
         </AppFlexContainer>
       </AppContainer>
