@@ -2,6 +2,7 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 import styled from "styled-components";
 import { MdExpandMore, MdOutlineNorthEast } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const LeftMenuStyles = styled.div`
   min-width: 275px;
@@ -106,9 +107,9 @@ const LeftMenuStyles = styled.div`
 const LeftMenu = () => {
   return (
     <LeftMenuStyles>
-      <a href="#">
+      <Link to="/">
         Dashboard <MdOutlineNorthEast />
-      </a>
+      </Link>
       <Accordion>
         <Accordion.Item eventKey="1">
           <Accordion.Header>
@@ -143,10 +144,12 @@ const LeftMenu = () => {
             NFT Lookup <MdExpandMore />
           </Accordion.Header>
           <Accordion.Body>
-            <a href="#">NFT list</a>
-            <a href="#">NFT Transfer inquiry</a>
-            <a href="#">Claim information inquiry</a>
-            <a href="#">Query claims statistics</a>
+            <Link to="/nft-list">NFT list</Link>
+            <Link to="/nft-transfer-inquiry">NFT Transfer inquiry</Link>
+            <Link to="/claim-information-inquiry">
+              Claim information inquiry
+            </Link>
+            <Link to="/query-claim-statistics">Query claims statistics</Link>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

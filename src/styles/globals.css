@@ -52,3 +52,19 @@
   background-color: #fff;
   font-size: 0.9rem;
 }
+.form-check-input:checked {
+  background-color: #157347;
+  border-color: #157347;
+}
+.form-select:focus,
+.form-check-input:focus,
+.page-link:focus {
+  box-shadow: 0 0 0 0.25rem rgba(21, 115, 71, 0.25);
+}
+.active > .page-link,
+.page-link.active {
+  background-color: #157347;
+}
+.page-link {
+  color: #157347;
+}

@@ -1,12 +1,75 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import { Button, Form, Table } from "react-bootstrap";
 import styled from "styled-components";
 import { AppContainer } from "../components/AppContainer";
 import { AppFlexContainer } from "../components/AppFlexContainer";
 import TopHeader from "../components/Header";
 import LeftMenu from "../components/LeftMenu";
-import NavBar from "../components/NavBar";
 import { RightContentBox } from "../components/RightContentBox";
+import { BsDownload, BsLink45Deg, BsEye } from "react-icons/bs";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+import Chart from "chart.js/auto";
+import Footer from "../components/Footer";
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const options = {
+  responsive: true,
+};
+export const options2 = {
+  responsive: true,
+};
+
+const labels = [
+  "2023-04-01",
+  "2023-04-02",
+  "2023-04-03",
+  "2023-04-04",
+  "2023-04-05",
+  "2023-04-06",
+];
+
+export const data = {
+  labels,
+  datasets: [
+    {
+      label: "Trading Volume",
+      data: [[10], [20], [30], [40], [50], [60]],
+      borderColor: "#24292e",
+      backgroundColor: "#24292e",
+      color: "var(--fff-000)",
+    },
+  ],
+};
+export const data2 = {
+  labels,
+  datasets: [
+    {
+      label: "Sales Rate",
+      data: [[10], [20], [30], [40], [50], [60]],
+      borderColor: "#24292e",
+      backgroundColor: "#24292e",
+      color: "var(--fff-000)",
+    },
+  ],
+};
 
 const DashboardStyles = styled.div`
   width: 100%;
@@ -40,9 +103,30 @@ const DashboardStyles = styled.div`
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: auto;
     grid-gap: 1.5rem;
-    margin: 2.5rem 0 0 0;
+    margin: 4rem 0 0 0;
+  }
+  .dashboard-chart-box {
+    width: 100%;
+    margin: 4rem 0 0 0;
+    & .dashboard-chart-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 10rem 10rem 10rem;
+      grid-gap: 1rem;
+      margin: 0 0 1.5rem 0;
+    }
+    & canvas {
+      max-height: 20rem;
+    }
+  }
+  .dashboard-chart {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: #fff;
   }
 `;
+
 const Dashboard = () => {
   return (
     <DashboardStyles>
@@ -56,7 +140,7 @@ const Dashboard = () => {
           <LeftMenu />
           <RightContentBox>
             <div className="stats-section">
-              <h4>NFT Stats</h4>
+              <h5>NFT Stats</h5>
               <div className="stats-grid">
                 <div className="stats-grid-card">
                   <h2>10,000</h2>
@@ -132,7 +216,7 @@ const Dashboard = () => {
                 </Table>
               </div>
               <div>
-                <h6>Top 10 by number of NFT Holdings</h6>
+                <h5>Top 10 by number of NFT Holdings</h5>
                 <Table striped bordered hover>
                   <thead>
                     <tr>
@@ -165,66 +249,39 @@ const Dashboard = () => {
                       <td>20</td>
                       <td>0xCAC123456789123456789012345</td>
                     </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
-                    <tr>
-                      <td>20</td>
-                      <td>0xCAC123456789123456789012345</td>
-                    </tr>
                   </tbody>
                 </Table>
               </div>
             </div>
+            <div className="dashboard-chart-box">
+              <h5>NFT Trading Chart</h5>
+
+              <div className="dashboard-chart">
+                <div className="dashboard-chart-grid">
+                  <Form.Control type="date" placeholder="Enter start date" />
+                  <Form.Control type="date" placeholder="Enter end date" />
+                  <Button variant="success">
+                    <BsEye /> View
+                  </Button>
+                </div>
+                <Bar options={options} data={data} />
+              </div>
+            </div>
+            <div className="dashboard-chart-box">
+              <h5>NEST Booking Performance Chart</h5>
+
+              <div className="dashboard-chart">
+                <div className="dashboard-chart-grid">
+                  <Form.Control type="date" placeholder="Enter start date" />
+                  <Form.Control type="date" placeholder="Enter end date" />
+                  <Button variant="success">
+                    <BsEye /> View
+                  </Button>
+                </div>
+                <Bar options={options2} data={data2} />
+              </div>
+            </div>
+            <Footer />
           </RightContentBox>
         </AppFlexContainer>
       </AppContainer>
