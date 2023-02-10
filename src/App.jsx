@@ -15,6 +15,13 @@ import {
 import ScrollToTop from "./components/ScrollToTop";
 import NFTTransferInquiry from "./views/NFTTransferInquiry";
 import QueryClaimStatistics from "./views/QueryClaimStatistics";
+import ProductSettings from "./views/ProductSettings";
+import AddProduct from "./views/AddProduct";
+import SalesSettings from "./views/SalesSettings";
+import ReservationInquiry from "./views/ReservationInquiry";
+import LuckyDraw from "./views/LuckyDraw";
+import PerformanceDataInquiry from "./views/PerformanceDataInquiry";
+import LMSSeetings from "./views/LMSSeetings";
 
 function App() {
   return (
@@ -39,6 +46,41 @@ function App() {
             exact
             path="/query-claim-statistics"
             element={<QueryClaimStatistics />}
+          />
+          <Route
+            exact
+            path="/product-management/product-settings"
+            element={<ProductSettings />}
+          />
+          <Route
+            exact
+            path="/product-management/add-product"
+            element={<AddProduct />}
+          />
+          <Route
+            exact
+            path="/product-management/sales-settings"
+            element={<SalesSettings />}
+          />
+          <Route
+            exact
+            path="/product-management/reservation-inquiry"
+            element={<ReservationInquiry />}
+          />
+          <Route
+            exact
+            path="/product-management/lucky-draw"
+            element={<LuckyDraw />}
+          />
+          <Route
+            exact
+            path="/product-management/performance-data-inquiry"
+            element={<PerformanceDataInquiry />}
+          />
+          <Route
+            exact
+            path="/product-management/lms-settings"
+            element={<LMSSeetings />}
           />
         </Routes>
       </Switch>

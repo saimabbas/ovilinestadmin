@@ -21,7 +21,7 @@ const NavBarStyles = styled.nav`
 const NavBar = () => {
   return (
     <NavBarStyles>
-      <p className="time-and-date">2023-00-00 (Mon) 01:00 PM</p>
+      <p className="time-and-date">2023-00-00 (월) 오후 01:00</p>
       <Dropdown>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           Admin

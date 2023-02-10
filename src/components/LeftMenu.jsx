@@ -128,13 +128,17 @@ const LeftMenu = () => {
       <Accordion>
         <Accordion.Item eventKey="1">
           <Accordion.Header>
-            Reservation Page Management <MdExpandMore />
+            예약 페이지 관리 <MdExpandMore />
           </Accordion.Header>
           <Accordion.Body>
-            <a href="#">product management</a>
-            <a href="#">Reservation / lottery inquiry</a>
-            <a href="#">Inventory Management</a>
-            <a href="#">performance inquiry</a>
+            <Link to="/product-management/product-settings">상품 관리</Link>
+            <Link to="/product-management/sales-settings">상품 판매 관리</Link>
+            <Link to="/product-management/reservation-inquiry">예약 조회</Link>
+            <Link to="/product-management/lucky-draw">추첨 조회</Link>
+            <Link to="/product-management/performance-data-inquiry">
+              실적 조회
+            </Link>
+            <Link to="/product-management/lms-settings">LMS 설정</Link>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

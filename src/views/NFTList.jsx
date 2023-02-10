@@ -27,7 +27,7 @@ const NFTListStyles = styled.div`
   .nft-top-btn-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: 10rem 10rem 10rem;
+    grid-template-columns: max-content max-content max-content;
     grid-gap: 1rem;
     margin: 1rem 0 0 0;
   }

@@ -12,7 +12,7 @@ const FooterStyles = styled.footer`
 const Footer = () => {
   return (
     <FooterStyles>
-      <p>Admin Admin (e-mail address)</p>
+      <p>어드민 관리자 (이메일 주소)</p>
     </FooterStyles>
   );
 };
