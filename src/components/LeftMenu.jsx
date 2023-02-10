@@ -157,9 +157,9 @@ const LeftMenu = () => {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
-      <a href="#">
-        Admin ID Management <MdOutlineNorthEast />
-      </a>
+      <Link to="/admin-id-management">
+        어드민 ID 관리 <MdOutlineNorthEast />
+      </Link>
     </LeftMenuStyles>
   );
 };

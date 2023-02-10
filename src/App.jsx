@@ -22,6 +22,8 @@ import ReservationInquiry from "./views/ReservationInquiry";
 import LuckyDraw from "./views/LuckyDraw";
 import PerformanceDataInquiry from "./views/PerformanceDataInquiry";
 import LMSSeetings from "./views/LMSSeetings";
+import AdminID from "./views/AdminID";
+import AddAdminID from "./views/AddAdminID";
 
 function App() {
   return (
@@ -82,6 +84,8 @@ function App() {
             path="/product-management/lms-settings"
             element={<LMSSeetings />}
           />
+          <Route exact path="/admin-id-management" element={<AdminID />} />
+          <Route exact path="/add-admin-id" element={<AddAdminID />} />
         </Routes>
       </Switch>
     </>
