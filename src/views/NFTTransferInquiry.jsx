@@ -23,6 +23,9 @@ const NFTTransferInquiryStyles = styled.div`
     display: grid;
     grid-template-columns: 10rem 10rem 1fr max-content;
     grid-gap: 1rem;
+    & .input-group select {
+      max-width: max-content;
+    }
   }
   .nft-top-btn-grid {
     width: 100%;
@@ -53,46 +56,44 @@ const NFTTransferInquiry = () => {
         <AppFlexContainer>
           <LeftMenu />
           <RightContentBox>
-            <h4>NFT Transfer Inquiry</h4>
+            <h4>NFT Transfer 조회</h4>
             <div className="nft-top-grid">
               <Form.Control type="date" placeholder="Enter start date" />
               <Form.Control type="date" placeholder="Enter end date" />
               <InputGroup>
-                <DropdownButton
-                  variant="success"
-                  title="No search criteria"
-                  id="input-group-dropdown-1"
-                >
-                  <Dropdown.Item href="#">NFT Number</Dropdown.Item>
-                  <Dropdown.Item href="#">To Wallet Address</Dropdown.Item>
-                  <Dropdown.Item href="#">From Wallet Address</Dropdown.Item>
-                </DropdownButton>
+                <Form.Select aria-label="Default select example">
+                  <option value="0">검색조건 없음</option>
+                  <option value="1">NFT 번호</option>
+                  <option value="2">TO 지갑주소</option>
+                  <option value="3">FROM 지갑주소</option>
+                </Form.Select>
                 <Form.Control aria-label="Text input with dropdown button" />
               </InputGroup>
               <Form.Check
                 type={"checkbox"}
                 id={" klay-checkbox"}
-                label={"View KLAY deals"}
+                label={"KLAY 거래보기"}
               />
             </div>
             <div className="nft-top-btn-grid">
               <Button variant="success">
-                <BsEye /> Lookup
+                <BsEye /> 조회
               </Button>
               <Button variant="outline-success">
-                <BsDownload /> Download Excel
+                <BsDownload /> Excel 다운로드
               </Button>
               <Button variant="outline-success">
-                <BsLink45Deg /> Scope Link
+                <BsLink45Deg />
+                스코프 링크
               </Button>
             </div>
             <Table striped bordered hover className="my-5">
               <thead>
                 <tr>
-                  <th>Date</th>
+                  <th>일시</th>
                   <th>NFTs</th>
-                  <th>From Wallet Address</th>
-                  <th>To Wallet Address</th>
+                  <th>FROM 지갑주소</th>
+                  <th>TO 지갑주소</th>
                   <th>KLAY</th>
                 </tr>
               </thead>

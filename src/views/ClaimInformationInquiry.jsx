@@ -23,6 +23,9 @@ const ClaimInformationInquiryStyles = styled.div`
     display: grid;
     grid-template-columns: 10rem 10rem 10rem 1fr;
     grid-gap: 1rem;
+    & .input-group select {
+      max-width: max-content;
+    }
   }
   .nft-top-btn-grid {
     width: 100%;
@@ -53,50 +56,58 @@ const ClaimInformationInquiry = () => {
         <AppFlexContainer>
           <LeftMenu />
           <RightContentBox>
-            <h4>Claim Information Inquiry</h4>
+            <h4>클레임 정보조회</h4>
             <div className="cii-top-grid">
               <Form.Control type="date" placeholder="Enter start date" />
               <Form.Control type="date" placeholder="Enter end date" />
               <Form.Select aria-label="Default select example">
-                <option>Rarity</option>
-                <option value="1">Superior</option>
-                <option value="2">Deluxe</option>
-                <option value="3">Executive</option>
-                <option value="4">Presidential Suite</option>
-                <option value="5">Royal Suite</option>
+                <option value="0">유틸리티 선택</option>
+                <option value="1">전체 선택</option>
+                <option value="2">전용객실 예약권</option>
+                <option value="3">일반 콘도 무료 숙박권</option>
+                <option value="4">홀더 파티</option>
+                <option value="5">스키 시즌권</option>
+                <option value="6">프리미엄 콘도 무료 숙박권</option>
+                <option value="7">호텔 객실 무료 숙박권</option>
+                <option value="8">골프 라운딩 무료 이용권</option>
+                <option value="9">케이블카 연간 이용권</option>
+                <option value="10">케이블카 이용권</option>
+                <option value="11">워터파크 연간 이용권</option>
+                <option value="12">워터파크 입장권</option>
+                <option value="13">리프트 이용권</option>
+                <option value="14">마운틴코스터 이용권</option>
+                <option value="15">이벤트 리프트권</option>
               </Form.Select>
               <InputGroup>
-                <DropdownButton
-                  variant="success"
-                  title="Utility Selection"
-                  id="input-group-dropdown-1"
-                >
-                  <Dropdown.Item href="#">Golf Round Free Pass 1</Dropdown.Item>
-                  <Dropdown.Item href="#">Golf Round Free Pass 2</Dropdown.Item>
-                  <Dropdown.Item href="#">Golf Round Free Pass 3</Dropdown.Item>
-                </DropdownButton>
+                <Form.Select aria-label="Default select example">
+                  <option value="0">검색조건 없음</option>
+                  <option value="1">NFT 번호</option>
+                  <option value="2">TO 지갑주소</option>
+                  <option value="3">FROM 지갑주소</option>
+                </Form.Select>
                 <Form.Control aria-label="Text input with dropdown button" />
               </InputGroup>
             </div>
             <div className="nft-top-btn-grid">
               <Button variant="success">
-                <BsEye /> Lookup
+                <BsEye /> 조회
               </Button>
               <Button variant="outline-success">
-                <BsDownload /> Download Excel
+                <BsDownload /> Excel 다운로드
               </Button>
               <Button variant="outline-success">
-                <BsLink45Deg /> Scope Link
+                <BsLink45Deg />
+                스코프 링크
               </Button>
             </div>
             <Table striped bordered hover className="my-5">
               <thead>
                 <tr>
-                  <th>Date</th>
+                  <th>일시</th>
                   <th>NFTs</th>
-                  <th>Wallet Address</th>
-                  <th>Utility</th>
-                  <th>Verification Mobile Number</th>
+                  <th>지갑주소</th>
+                  <th>유틸리티</th>
+                  <th>인증 </th>
                 </tr>
               </thead>
               <tbody>

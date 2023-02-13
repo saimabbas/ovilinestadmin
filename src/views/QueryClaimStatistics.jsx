@@ -21,7 +21,7 @@ const QueryClaimStatisticsStyles = styled.div`
   .qcs-top-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: 10rem 10rem 10rem 10rem;
+    grid-template-columns: max-content max-content max-content max-content;
     grid-gap: 1rem;
   }
   .nft-top-btn-grid {
@@ -58,17 +58,17 @@ const QueryClaimStatistics = () => {
               <Form.Control type="date" placeholder="Enter start date" />
               <Form.Control type="date" placeholder="Enter end date" />
               <Button variant="success">
-                <BsEye /> Lookup
+                <BsEye /> 조회
               </Button>
               <Button variant="outline-success">
-                <BsDownload /> Download Excel
+                <BsDownload /> Excel 다운로드
               </Button>
             </div>
 
             <Table striped bordered hover className="my-5">
               <thead>
                 <tr>
-                  <th>Utility Claims Statistics</th>
+                  <th>유틸리티 클레임 통계</th>
                   <th></th>
                   <th></th>
                   <th></th>
@@ -91,7 +91,7 @@ const QueryClaimStatistics = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -112,7 +112,7 @@ const QueryClaimStatistics = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -133,7 +133,7 @@ const QueryClaimStatistics = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -154,7 +154,7 @@ const QueryClaimStatistics = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -175,7 +175,7 @@ const QueryClaimStatistics = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -196,7 +196,7 @@ const QueryClaimStatistics = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -217,7 +217,7 @@ const QueryClaimStatistics = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -238,7 +238,7 @@ const QueryClaimStatistics = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -259,7 +259,7 @@ const QueryClaimStatistics = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -280,7 +280,7 @@ const QueryClaimStatistics = () => {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Private Room Reservation Ticket</td>
+                  <td>전용객실 예약권</td>
                   <td></td>
                   <td></td>
                   <td></td>

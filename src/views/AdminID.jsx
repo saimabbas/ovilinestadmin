@@ -112,7 +112,7 @@ const AdminID = () => {
                     <td>활성화</td>
                     <td>
                       {" "}
-                      <BsPencilFill /> 활성화
+                      <BsPencilFill /> 수정
                     </td>
                   </tr>
                   <tr>
@@ -125,7 +125,7 @@ const AdminID = () => {
                     <td>활성화</td>
                     <td>
                       {" "}
-                      <BsPencilFill /> 활성화
+                      <BsPencilFill /> 수정
                     </td>
                   </tr>
                   <tr>
@@ -138,7 +138,7 @@ const AdminID = () => {
                     <td>활성화</td>
                     <td>
                       {" "}
-                      <BsPencilFill /> 활성화
+                      <BsPencilFill /> 수정
                     </td>
                   </tr>
                   <tr>
@@ -151,7 +151,7 @@ const AdminID = () => {
                     <td>활성화</td>
                     <td>
                       {" "}
-                      <BsPencilFill /> 활성화
+                      <BsPencilFill /> 수정
                     </td>
                   </tr>
                   <tr>
@@ -164,7 +164,7 @@ const AdminID = () => {
                     <td>활성화</td>
                     <td>
                       {" "}
-                      <BsPencilFill /> 활성화
+                      <BsPencilFill /> 수정
                     </td>
                   </tr>
                   <tr>
@@ -177,7 +177,7 @@ const AdminID = () => {
                     <td>활성화</td>
                     <td>
                       {" "}
-                      <BsPencilFill /> 활성화
+                      <BsPencilFill /> 수정
                     </td>
                   </tr>
                   <tr>
@@ -190,7 +190,7 @@ const AdminID = () => {
                     <td>활성화</td>
                     <td>
                       {" "}
-                      <BsPencilFill /> 활성화
+                      <BsPencilFill /> 수정
                     </td>
                   </tr>
                   <tr>
@@ -203,7 +203,7 @@ const AdminID = () => {
                     <td>활성화</td>
                     <td>
                       {" "}
-                      <BsPencilFill /> 활성화
+                      <BsPencilFill /> 수정
                     </td>
                   </tr>
                 </tbody>

@@ -145,15 +145,13 @@ const LeftMenu = () => {
       <Accordion>
         <Accordion.Item eventKey="1">
           <Accordion.Header>
-            NFT Lookup <MdExpandMore />
+            NFT 조회 <MdExpandMore />
           </Accordion.Header>
           <Accordion.Body>
-            <Link to="/nft-list">NFT list</Link>
-            <Link to="/nft-transfer-inquiry">NFT Transfer inquiry</Link>
-            <Link to="/claim-information-inquiry">
-              Claim information inquiry
-            </Link>
-            <Link to="/query-claim-statistics">Query claims statistics</Link>
+            <Link to="/nft-list">NFT 목록</Link>
+            <Link to="/nft-transfer-inquiry">NFT Transfer 조회</Link>
+            <Link to="/claim-information-inquiry">클레임 정보 조회</Link>
+            <Link to="/query-claim-statistics">클레임 통계 조회</Link>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

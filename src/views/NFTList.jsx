@@ -23,6 +23,9 @@ const NFTListStyles = styled.div`
     display: grid;
     grid-template-columns: 10rem 1fr;
     grid-gap: 1rem;
+    & .input-group select {
+      max-width: max-content;
+    }
   }
   .nft-top-btn-grid {
     width: 100%;
@@ -53,38 +56,36 @@ const NFTList = () => {
         <AppFlexContainer>
           <LeftMenu />
           <RightContentBox>
-            <h4>NFT List</h4>
+            <h4>NFT 목록</h4>
             <div className="nftlist-top-grid">
               <Form.Select aria-label="Default select example">
-                <option>Rarity</option>
+                <option value="0">등급</option>
                 <option value="1">Superior</option>
                 <option value="2">Deluxe</option>
                 <option value="3">Executive</option>
                 <option value="4">Presidential Suite</option>
                 <option value="5">Royal Suite</option>
+                <option value="6">전체 선택</option>
               </Form.Select>
               <InputGroup>
-                <DropdownButton
-                  variant="success"
-                  title="No search criteria"
-                  id="input-group-dropdown-1"
-                >
-                  <Dropdown.Item href="#">NFT Number</Dropdown.Item>
-                  <Dropdown.Item href="#">To Wallet Address</Dropdown.Item>
-                  <Dropdown.Item href="#">From Wallet Address</Dropdown.Item>
-                </DropdownButton>
+                <Form.Select aria-label="Default select example">
+                  <option value="0">검색조건 없음</option>
+                  <option value="1">NFT번호</option>
+                  <option value="2">지갑주소</option>
+                </Form.Select>
                 <Form.Control aria-label="Text input with dropdown button" />
               </InputGroup>
             </div>
             <div className="nft-top-btn-grid">
               <Button variant="success">
-                <BsEye /> Lookup
+                <BsEye /> 조회
               </Button>
               <Button variant="outline-success">
-                <BsDownload /> Download Excel
+                <BsDownload /> Excel 다운로드
               </Button>
               <Button variant="outline-success">
-                <BsLink45Deg /> Scope Link
+                <BsLink45Deg />
+                스코프 링크
               </Button>
             </div>
 
@@ -92,10 +93,10 @@ const NFTList = () => {
               <thead>
                 <tr>
                   <th>NFTs</th>
-                  <th>Owner's Wallet Address</th>
-                  <th>Rarity</th>
-                  <th>Number of Transactions</th>
-                  <th>Last Transaction Date</th>
+                  <th>소유 지갑주소</th>
+                  <th>등급</th>
+                  <th>거래 회수</th>
+                  <th>최근 거래날짜</th>
                 </tr>
               </thead>
               <tbody>
