@@ -108,7 +108,8 @@ const LeftMenu = () => {
   return (
     <LeftMenuStyles>
       <Link to="/">
-        Dashboard <MdOutlineNorthEast />
+        대시보드
+        <MdOutlineNorthEast />
       </Link>
       <Accordion>
         <Accordion.Item eventKey="1">
