@@ -24,6 +24,18 @@ import PerformanceDataInquiry from "./views/PerformanceDataInquiry";
 import LMSSeetings from "./views/LMSSeetings";
 import AdminID from "./views/AdminID";
 import AddAdminID from "./views/AddAdminID";
+import RoadmapManagement from "./views/RoadmapManagement";
+import AddRoadmap from "./views/AddRoadmap";
+import FAQSettings from "./views/FAQSettings";
+import AddFAQ from "./views/AddFAQ";
+import TermsOfUseSettings from "./views/TermsOfUseSettings";
+import AddTermsOfUse from "./views/AddTermsOfUse";
+import PrivacyPolicySettings from "./views/PrivacyPolicySettings";
+import AddPrivacyPolicy from "./views/AddPrivacyPolicy";
+import ComplexDetailsSettings from "./views/ComplexDetailsSettings";
+import AddComplexDetails from "./views/AddComplexDetails";
+import RoomDetailsSettings from "./views/RoomDetailsSettings";
+import AddRoomDetails from "./views/AddRoomDetails";
 
 function App() {
   return (
@@ -86,6 +98,50 @@ function App() {
           />
           <Route exact path="/admin-id-management" element={<AdminID />} />
           <Route exact path="/add-admin-id" element={<AddAdminID />} />
+          <Route
+            exact
+            path="/roadmap-management"
+            element={<RoadmapManagement />}
+          />
+          <Route exact path="/add-roadmap" element={<AddRoadmap />} />
+          <Route exact path="/faq-settings" element={<FAQSettings />} />
+          <Route exact path="/add-faq" element={<AddFAQ />} />
+          <Route
+            exact
+            path="/terms-of-use-settings"
+            element={<TermsOfUseSettings />}
+          />
+          <Route
+            exact
+            path="/add-to-terms-of-use"
+            element={<AddTermsOfUse />}
+          />
+          <Route
+            exact
+            path="/privacy-policy-settings"
+            element={<PrivacyPolicySettings />}
+          />
+          <Route
+            exact
+            path="/add-privacy-policy"
+            element={<AddPrivacyPolicy />}
+          />
+          <Route
+            exact
+            path="/complex-details-settings"
+            element={<ComplexDetailsSettings />}
+          />
+          <Route
+            exact
+            path="/add-complex-details"
+            element={<AddComplexDetails />}
+          />
+          <Route
+            exact
+            path="/room-details-settings"
+            element={<RoomDetailsSettings />}
+          />
+          <Route exact path="/add-room-details" element={<AddRoomDetails />} />
         </Routes>
       </Switch>
     </>

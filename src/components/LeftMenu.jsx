@@ -113,15 +113,15 @@ const LeftMenu = () => {
       <Accordion>
         <Accordion.Item eventKey="1">
           <Accordion.Header>
-            Front Page Management <MdExpandMore />{" "}
+            프론트 페이지 관리 <MdExpandMore />{" "}
           </Accordion.Header>
           <Accordion.Body>
-            <a href="#">Roadmap management</a>
-            <a href="#">FAQ management</a>
-            <a href="#">Terms of service</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Accommodation information management</a>
-            <a href="#">Room information management</a>
+            <Link to="/roadmap-management">로드맵 관리</Link>
+            <Link to="/faq-settings">FAQ 관리</Link>
+            <Link to="/terms-of-use-settings">이용약관</Link>
+            <Link to="/privacy-policy-settings">개인정보방침</Link>
+            <Link to="/complex-details-settings">숙소 정보 관리</Link>
+            <Link to="/room-details-settings">객실 정보 관리</Link>
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

@@ -302,20 +302,22 @@ const AddProduct = () => {
                 </div>
               </Tab>
               <Tab eventKey="Homepage" title="STEP 4. 홈페이지 업데이트">
-                <p>
-                  상품 추가 완료 후, 요금을 수정할 수 없습니다. 이용 요금은 용평
-                  시스템의 요금 정보를 참조합니다. 업데이트 후 STEP 1. 기본
-                  설정은 수정이 불가능 합니다. (기존 상품을 삭제하고 새로
-                  등록해야 합니다) 업데이트 후 STEP 2. 패키지 설정은 수정할 수
-                  있습니다. 입력한 내용을 다시 확인하려면 상단의 STEP 버튼으로
-                  이동할 수 있습니다.
-                </p>
-                <Form.Check
-                  inline
-                  label="상품 정보 입력을 모두 완료 했습니다."
-                  name="group1"
-                  type={"checkbox"}
-                />
+                <div className="ap-box">
+                  <p>
+                    상품 추가 완료 후, 요금을 수정할 수 없습니다. 이용 요금은
+                    용평 시스템의 요금 정보를 참조합니다. 업데이트 후 STEP 1.
+                    기본 설정은 수정이 불가능 합니다. (기존 상품을 삭제하고 새로
+                    등록해야 합니다) 업데이트 후 STEP 2. 패키지 설정은 수정할 수
+                    있습니다. 입력한 내용을 다시 확인하려면 상단의 STEP 버튼으로
+                    이동할 수 있습니다.
+                  </p>
+                  <Form.Check
+                    inline
+                    label="상품 정보 입력을 모두 완료 했습니다."
+                    name="group1"
+                    type={"checkbox"}
+                  />
+                </div>
               </Tab>
             </Tabs>
             {/* <div className="ap-box">
